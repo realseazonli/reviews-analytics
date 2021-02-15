@@ -21,9 +21,13 @@ for review in data :
         pass
 print(len(new))
 
-good = []
-for review in data :
-    if 'good' in review :
-        good.append(review)
+# good = []
+# for review in data :
+#     if 'good' in review :
+#         good.append(review)
+# print(len(good))
+# print(good[0])
+
+good = [d for d in data if 'good' in d]
 print(len(good))
-print(good[0])
+print(good[1])
