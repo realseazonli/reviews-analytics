@@ -20,3 +20,10 @@ for review in data :
     else :
         pass
 print(len(new))
+
+good = []
+for review in data :
+    if 'good' in review :
+        good.append(review)
+print(len(good))
+print(good[0])
