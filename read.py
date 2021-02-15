@@ -12,8 +12,11 @@ with open('reviews.txt', 'r') as f :
             print(len(data))
 print('档案读取完了，总共有', len(data), '个留言')
 
-names = ['Tom', 'Simon', 'Mike', 'angerina']
+# names = ['Tom', 'Simon', 'Mike', 'angerina']
+new = []
 for review in data :
-    total = total + len(review)
-result = total / len(data)
-print(result)
+    if len(review) < 100 :
+        new.append(review)
+    else :
+        pass
+print(len(new))
