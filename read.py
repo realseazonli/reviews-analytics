@@ -1,3 +1,4 @@
+import time
 
 data = []
 count = 0
@@ -12,6 +13,7 @@ with open('reviews.txt', 'r') as f :
         if count % 1000 == 0 :
             print(len(data))
 print('档案读取完了，总共有', len(data), '个留言')
+start_time = time.time()
 for d in data :
     words = d.split()
     for word in words :
@@ -19,6 +21,8 @@ for d in data :
                 word_count[word] += 1
             else :
                 word_count[word] = 1
+end_time = time.time()
+print('运算用了', round(end_time - start_time, 2), '秒')
 while True:
     search = input('请输入要查询的单词（输入q/Q退出查询）：')
     if search == 'q' or search == 'Q':
